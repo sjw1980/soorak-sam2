@@ -3,7 +3,7 @@
 		"UserPromptSubmit": [
 			{
 				"type": "command",
-				"command": "python .github/hooks/save-prompt.py"
+				"command": "python3 .github/hooks/save-prompt.py"
 			}
 		]
 	}

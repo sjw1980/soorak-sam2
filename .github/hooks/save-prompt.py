@@ -6,6 +6,10 @@ import sys
 import json
 import re
 import os
+from pathlib import Path
+
+# .github/hooks/ → .github/ → repo root
+REPO_ROOT = Path(__file__).resolve().parent.parent.parent
 
 # stdin을 UTF-8로 읽어 한글 깨짐 방지
 if hasattr(sys.stdin, 'reconfigure'):
@@ -17,9 +21,9 @@ prompt = data.get('prompt', '')
 if not prompt:
     sys.exit(0)
 
-file_path = 'history.prompt.txt'
+file_path = REPO_ROOT / 'history.prompt.txt'
 
-if os.path.exists(file_path):
+if file_path.exists():
     with open(file_path, 'r', encoding='utf-8-sig') as f:
         lines = f.read().splitlines()
 else:

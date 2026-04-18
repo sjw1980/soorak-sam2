@@ -1,0 +1,58 @@
+{
+  "gen_at": "2026-04-18 15:17:04",
+  "ids": {
+    "goals": [],
+    "reqs": [],
+    "comps": [],
+    "ifs": [],
+    "units": [],
+    "tcs": [],
+    "itcs": [],
+    "qtcs": []
+  },
+  "rels": {
+    "goal_req": {},
+    "req_comp": {},
+    "comp_unit": {},
+    "unit_tc": {},
+    "req_tc": {},
+    "req_itc": {},
+    "req_qtc": {}
+  },
+  "labels": {
+    "req": {},
+    "tc": {},
+    "itc": {},
+    "qtc": {},
+    "comp": {},
+    "unit": {},
+    "goal": {}
+  },
+  "doc_meta": {
+    "SWE-1": {
+      "version": "—",
+      "status": "—"
+    },
+    "SWE-2": {
+      "version": "—",
+      "status": "—"
+    },
+    "SWE-3": {
+      "version": "—",
+      "status": "—"
+    },
+    "SWE-4": {
+      "version": "—",
+      "status": "—"
+    },
+    "SWE-5": {
+      "version": "—",
+      "status": "—"
+    },
+    "SWE-6": {
+      "version": "—",
+      "status": "—"
+    }
+  },
+  "hash": "3b6b4bbcf94ddfcf"
+}

@@ -14,7 +14,8 @@ import re
 import os
 from pathlib import Path
 
-DOCS_DIR = Path(r"d:\Works\soorak-sam\docs")
+# .github/hooks/ → .github/ → repo root → docs/
+DOCS_DIR = Path(__file__).resolve().parent.parent.parent / "docs"
 
 # -----------------------------------------------------------------------
 # 1.  Content (item-level) IDs  →  (subfolder, filename)
