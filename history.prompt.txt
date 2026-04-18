@@ -1,3 +1,10 @@
+11 ASPICE 의 에이전트를 세분화해서 agent를 만들꺼야.
+세분화는 각 프로세스의 BP로 나누면돼..
+세분화 BP는. docs/aspice_workflow.md 를 참조해줘.
+각 BP는 생성해 내야 하는 WP도 있어. WP에 대한 내용과 ID는 docs/aspice_wp_overview.md 파일은 참조해줘.
+세분화 하는 과정에서 기존의 agent는 공통적인 부분만 남겨두고. bp에 따라 동작할 수 있도록 agent를 작성해야해. 
+세분화해야 하는 에이전트는 .github/agents 폴더내의 SWE.5에 대해서 적용해줘.
+
 10 ASPICE 의 에이전트를 세분화해서 agent를 만들꺼야.
 세분화는 각 프로세스의 BP로 나누면돼..
 세분화 BP는. docs/aspice_workflow.md 를 참조해줘.
