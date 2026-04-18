@@ -1,0 +1,14 @@
+{
+	"hooks": {
+		"PostToolUse": [
+			{
+				"type": "command",
+				"command": "python .github/hooks/aspice_linkify.py"
+			},
+			{
+				"type": "command",
+				"command": "python .github/hooks/traceability_sync.py"
+			}
+		]
+	}
+}

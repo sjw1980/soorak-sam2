@@ -1,0 +1,20 @@
+# CMake 빌드 출력 (SPL2-BUILD-0001 §1.2 — 버전 관리 제외)
+build/
+build_*/
+
+# 커버리지 산출물
+*.gcda
+*.gcno
+*.info
+coverage_html/
+
+# 컴파일 산출물
+*.o
+*.a
+*.so
+*.out
+
+# IDE / 에디터
+.vscode/settings.json
+.cache/
+compile_commands.json

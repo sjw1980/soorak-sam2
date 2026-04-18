@@ -1,0 +1,10 @@
+{
+	"hooks": {
+		"UserPromptSubmit": [
+			{
+				"type": "command",
+				"command": "python .github/hooks/save-prompt.py"
+			}
+		]
+	}
+}

@@ -1,0 +1,71 @@
+cmake_minimum_required(VERSION 3.16)
+
+# =============================================================
+# 프로젝트 설정 — C & C++ 혼용
+# =============================================================
+project(MyProject C CXX)
+
+set(CMAKE_C_STANDARD 11)
+set(CMAKE_C_STANDARD_REQUIRED ON)
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+
+# =============================================================
+# 커버리지 플래그 (Debug 빌드 시 자동 활성화)
+# =============================================================
+if(CMAKE_BUILD_TYPE STREQUAL "Debug")
+    add_compile_options(--coverage -fprofile-arcs -ftest-coverage -O0 -g)
+    add_link_options(--coverage)
+endif()
+
+# =============================================================
+# 소스 파일 수집
+# =============================================================
+# 프로덕션 소스 (src/ 아래 C/C++ 파일)
+file(GLOB_RECURSE SOURCES
+    ${CMAKE_SOURCE_DIR}/src/*.c
+    ${CMAKE_SOURCE_DIR}/src/*.cpp
+)
+
+# 라이브러리로 빌드 (테스트에서 링크)
+add_library(project_lib STATIC ${SOURCES})
+target_include_directories(project_lib PUBLIC ${CMAKE_SOURCE_DIR}/include)
+
+# =============================================================
+# Google Test 연동 (설치된 gtest 사용)
+# =============================================================
+find_package(GTest REQUIRED)
+# GTest 설치가 없는 경우 FetchContent 방식 사용 (주석 해제):
+#
+# include(FetchContent)
+# FetchContent_Declare(
+#   googletest
+#   URL https://github.com/google/googletest/archive/refs/tags/v1.14.0.zip
+# )
+# set(gtest_force_shared_crt ON CACHE BOOL "" FORCE)
+# FetchContent_MakeAvailable(googletest)
+
+# =============================================================
+# 테스트 설정
+# =============================================================
+enable_testing()
+include(GoogleTest)
+
+# 테스트 소스 파일 수집
+file(GLOB_RECURSE TEST_SOURCES
+    ${CMAKE_SOURCE_DIR}/tests/*.cpp
+    ${CMAKE_SOURCE_DIR}/tests/*.c
+)
+
+# 테스트 실행 파일 생성
+add_executable(run_tests ${TEST_SOURCES})
+target_link_libraries(run_tests
+    PRIVATE
+    project_lib
+    GTest::GTest
+    GTest::Main
+)
+target_include_directories(run_tests PRIVATE ${CMAKE_SOURCE_DIR}/include)
+
+# CTest에 테스트 등록
+gtest_discover_tests(run_tests)
