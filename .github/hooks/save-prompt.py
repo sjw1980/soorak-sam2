@@ -43,5 +43,5 @@ num = max_num + 1
 # 새 항목을 맨 앞에 추가 (빈 줄 포함)
 new_lines = [f'{num} {prompt}', ''] + lines
 
-with open(file_path, 'w', encoding='utf-8') as f:
+with open(file_path, 'w', encoding='utf-8', newline='\n') as f:
     f.write('\n'.join(new_lines) + '\n')
