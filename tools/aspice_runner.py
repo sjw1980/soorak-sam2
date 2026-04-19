@@ -985,7 +985,15 @@ def run_step(index: int, step: dict, progress: dict):
         print(f"  예상 산출물: {', '.join(step['expected_outputs'])}")
         input(f"\n  작성을 완료했으면 Enter를 누르세요... ")
     else:
-        # 클립보드에 프롬프트 복사
+        # /clear 를 클립보드에 복사 → 사용자가 Chat에 붙여넣기
+        print(f"\n  {'─' * 56}")
+        print(f"  ⚠️  Copilot Chat 컨텍스트 초기화가 필요합니다.")
+        copy_to_clipboard("/clear")
+        print(f"  ✓ '/clear' 를 클립보드에 복사했습니다.")
+        print(f"  👉 Chat 입력창에 Ctrl+V → Enter 하세요.")
+        print(f"  {'─' * 56}")
+        input(f"  /clear 완료 후 Enter... ")
+
         print(f"\n  📋 프롬프트를 클립보드에 복사합니다...")
         prompt_text = step["prompt"]
         if copy_to_clipboard(prompt_text):
@@ -995,7 +1003,7 @@ def run_step(index: int, step: dict, progress: dict):
             print(f"  {prompt_text}")
             print(f"  ─────────────────────────────")
 
-        print(f"\n  👉 위 프롬프트를 AI(Copilot Chat 등)에 붙여넣고 실행하세요.")
+        print(f"\n  👉 Copilot Chat에 Ctrl+V로 붙여넣고 실행하세요.")
         print(f"  👉 Agent가 산출물을 생성하면 Enter를 누르세요.")
         input(f"\n  Agent 작업 완료 후 Enter... ")
 
