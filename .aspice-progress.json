@@ -8,9 +8,10 @@
     "SUP1-BP1",
     "SUP9-BP1",
     "SUP10-BP1",
-    "SWE4-BP1"
+    "SWE4-BP1",
+    "SWE5-BP1"
   ],
-  "last_step_index": 8,
+  "last_step_index": 9,
   "started_at": "2026-04-19 12:17",
   "last_stopped_at": "2026-04-19 12:39"
 }
