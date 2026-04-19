@@ -4,9 +4,10 @@
     "MAN3-BP1",
     "MAN3-BP2",
     "MAN3-BP3",
-    "SUP8-BP1"
+    "SUP8-BP1",
+    "SUP1-BP1"
   ],
-  "last_step_index": 4,
+  "last_step_index": 5,
   "started_at": "2026-04-19 12:17",
   "last_stopped_at": "2026-04-19 12:39"
 }
