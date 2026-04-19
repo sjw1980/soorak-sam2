@@ -51,6 +51,10 @@ argument-hint: "작업 내용을 입력하세요. 예: '신규 문제 보고서 
 | 테스트 결과 (SWE-4/5/6)     | 결함 발생 로그, 실패한 테스트 케이스 참조   |
 | SUP-1 QA 보고서             | 부적합 사항 발견 기록 참조                  |
 
+
+## WP 양식 참조
+
+> 산출물 양식은 `docs/wp-templates/README.md` 인덱스를 참조하세요. 각 WP ID별 상세 양식이 제공됩니다.
 ## Constraints
 
 - 공통 제약사항은 `aspice-sup9` 에이전트 참조

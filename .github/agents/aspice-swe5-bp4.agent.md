@@ -61,6 +61,10 @@ argument-hint: "작업 내용을 입력하세요. 예: '통합 빌드 목록 작
 | SW 아키텍처 설계서 (WP.04-04) | 컴포넌트 구조 및 의존 관계           |
 | SWE-4 단위 검증 결과          | 모든 SW 유닛에 대한 검증 완료 확인   |
 
+
+## WP 양식 참조
+
+> 산출물 양식은 `docs/wp-templates/README.md` 인덱스를 참조하세요. 각 WP ID별 상세 양식이 제공됩니다.
 ## Constraints
 
 - 공통 제약사항은 `aspice-swe5` 에이전트 참조

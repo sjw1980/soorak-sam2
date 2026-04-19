@@ -64,6 +64,10 @@ argument-hint: "작업 내용을 입력하세요. 예: '품질 계획서 초안 
 | 프로세스 정의 | 적용 프로세스(SWE-1~6, SUP-1/8/9/10) 목록 |
 | 형상 관리 계획서 (WP.08-04) | SUP.8.BP1 결과 |
 
+
+## WP 양식 참조
+
+> 산출물 양식은 `docs/wp-templates/README.md` 인덱스를 참조하세요. 각 WP ID별 상세 양식이 제공됩니다.
 ## Constraints
 
 - 공통 제약사항은 `aspice-sup1` 에이전트 참조

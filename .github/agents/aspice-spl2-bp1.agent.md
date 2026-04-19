@@ -55,6 +55,10 @@ argument-hint: "작업 내용을 입력하세요. 예: '출시 계획서 초안 
 | SUP.1 QA 감사 결과 (WP.13-18)         | 출시 진행 가능 여부 확인        |
 | MAN.3 프로젝트 계획서 (WP.08-12)      | 출시 일정 및 마일스톤           |
 
+
+## WP 양식 참조
+
+> 산출물 양식은 `docs/wp-templates/README.md` 인덱스를 참조하세요. 각 WP ID별 상세 양식이 제공됩니다.
 ## Constraints
 
 - 공통 제약사항은 `aspice-spl2` 에이전트 참조

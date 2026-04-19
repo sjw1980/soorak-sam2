@@ -58,6 +58,10 @@ argument-hint: "작업 내용을 입력하세요. 예: '형상 상태 보고서 
 | 변경 요청 현황 (SUP10-CR) | 미결·완료 CR 현황 |
 | 형상 관리 계획서 (WP.08-04) | 보고 기준 및 주기 |
 
+
+## WP 양식 참조
+
+> 산출물 양식은 `docs/wp-templates/README.md` 인덱스를 참조하세요. 각 WP ID별 상세 양식이 제공됩니다.
 ## Constraints
 
 - 공통 제약사항은 `aspice-sup8` 에이전트 참조

@@ -55,6 +55,10 @@ argument-hint: "작업 내용을 입력하세요. 예: 'SW 상세 설계-시험 
 | 시험 명세서 (WP.08-50)      | TC 목록·시나리오·기대 결과            |
 | 추적성 기록 (WP.13-22, BP5) | SW 유닛 ↔ TC 매핑 현황                |
 
+
+## WP 양식 참조
+
+> 산출물 양식은 `docs/wp-templates/README.md` 인덱스를 참조하세요. 각 WP ID별 상세 양식이 제공됩니다.
 ## Constraints
 
 - 공통 제약사항은 `aspice-swe4` 에이전트 참조

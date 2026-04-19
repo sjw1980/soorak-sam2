@@ -53,6 +53,10 @@ argument-hint: "작업 내용을 입력하세요. 예: 'CR 이행 검토 수행'
 | SWE 산출물 (REQ/ARCH/TC 등)           | 변경으로 갱신이 완료된 SWE 산출물         |
 | SUP-8 형상 관리 기록 (WP.13-10)       | CI 갱신 및 베이스라인 반영 여부           |
 
+
+## WP 양식 참조
+
+> 산출물 양식은 `docs/wp-templates/README.md` 인덱스를 참조하세요. 각 WP ID별 상세 양식이 제공됩니다.
 ## Constraints
 
 - 공통 제약사항은 `aspice-sup10` 에이전트 참조

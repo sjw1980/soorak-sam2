@@ -54,6 +54,10 @@ argument-hint: "작업 내용을 입력하세요. 예: '빌드 환경 명세서 
 | SUP.8 형상 관리 계획서 (WP.08-04) | 형상 통제 빌드 환경 요구사항 |
 | SWE.5 통합 빌드 이력              | 이전 검증된 빌드 환경 참조   |
 
+
+## WP 양식 참조
+
+> 산출물 양식은 `docs/wp-templates/README.md` 인덱스를 참조하세요. 각 WP ID별 상세 양식이 제공됩니다.
 ## Constraints
 
 - 공통 제약사항은 `aspice-spl2` 에이전트 참조

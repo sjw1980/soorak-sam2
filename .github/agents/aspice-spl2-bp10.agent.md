@@ -56,6 +56,10 @@ argument-hint: "작업 내용을 입력하세요. 예: '출시 승인 기준 정
 | SUP.9 미해결 문제 목록 (WP.13-07)   | 알려진 결함 심각도       |
 | SPL.2.BP9 출시 문서 (WP.08-16)      | 출시 문서 검토/승인 여부 |
 
+
+## WP 양식 참조
+
+> 산출물 양식은 `docs/wp-templates/README.md` 인덱스를 참조하세요. 각 WP ID별 상세 양식이 제공됩니다.
 ## Constraints
 
 - 공통 제약사항은 `aspice-spl2` 에이전트 참조

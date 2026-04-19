@@ -47,6 +47,10 @@ argument-hint: "작업 내용을 입력하세요. 예: '전달 매체 유형 결
 | SPL.2.BP2 출시 제품 목록 (WP.11-03) | 전달 대상 제품 항목 |
 | SUP.8 형상 관리 계획서 (WP.08-04)   | 취급 및 저장 지침   |
 
+
+## WP 양식 참조
+
+> 산출물 양식은 `docs/wp-templates/README.md` 인덱스를 참조하세요. 각 WP ID별 상세 양식이 제공됩니다.
 ## Constraints
 
 - 공통 제약사항은 `aspice-spl2` 에이전트 참조

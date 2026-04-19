@@ -49,6 +49,10 @@ argument-hint: "작업 내용을 입력하세요. 예: '신규 변경 요청 작
 | 문제 보고서 (SUP9-PR-XXXX)  | 문제 해결로 시작된 CR의 경우 참조  |
 | SWE 산출물 (REQ/ARCH/TC 등) | 변경 배경이 된 산출물 식별         |
 
+
+## WP 양식 참조
+
+> 산출물 양식은 `docs/wp-templates/README.md` 인덱스를 참조하세요. 각 WP ID별 상세 양식이 제공됩니다.
 ## Constraints
 
 - 공통 제약사항은 `aspice-sup10` 에이전트 참조

@@ -65,6 +65,10 @@ Open(접수) → Under Analysis(분석 중) → Pending Approval(승인 대기)
 | 변경 요청 (WP.13-16)        | 상태를 기록할 CR 대상          |
 | 변경 관리 계획서 (WP.08-28) | CR 상태 모델 및 상태 전환 기준 |
 
+
+## WP 양식 참조
+
+> 산출물 양식은 `docs/wp-templates/README.md` 인덱스를 참조하세요. 각 WP ID별 상세 양식이 제공됩니다.
 ## Constraints
 
 - 공통 제약사항은 `aspice-sup10` 에이전트 참조

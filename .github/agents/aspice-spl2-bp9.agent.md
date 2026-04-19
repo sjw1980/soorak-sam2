@@ -52,6 +52,10 @@ argument-hint: "작업 내용을 입력하세요. 예: '출시 노트 초안 작
 | SUP.10 변경 요청 기록 (WP.13-16)    | 구현된 CR 목록                 |
 | SWE.6 적격성 테스트 결과 (WP.13-50) | 검증 완료 기능 및 결함 목록    |
 
+
+## WP 양식 참조
+
+> 산출물 양식은 `docs/wp-templates/README.md` 인덱스를 참조하세요. 각 WP ID별 상세 양식이 제공됩니다.
 ## Constraints
 
 - 공통 제약사항은 `aspice-spl2` 에이전트 참조

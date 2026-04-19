@@ -61,6 +61,10 @@ argument-hint: "작업 내용을 입력하세요. 예: '수정 통제 기록 작
 | 변경 요청 (SUP10-CR) | SUP-10으로부터 입력되는 승인된 변경 요청 |
 | 형상 감사 결과 (SUP.8.BP8) | 검증 완료 확인 |
 
+
+## WP 양식 참조
+
+> 산출물 양식은 `docs/wp-templates/README.md` 인덱스를 참조하세요. 각 WP ID별 상세 양식이 제공됩니다.
 ## Constraints
 
 - 공통 제약사항은 `aspice-sup8` 에이전트 참조

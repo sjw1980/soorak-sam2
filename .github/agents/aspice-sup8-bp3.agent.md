@@ -61,6 +61,10 @@ argument-hint: "작업 내용을 입력하세요. 예: '형상 관리 시스템 
 | 형상 항목 목록 (WP.13-10) | 관리 대상 CI 목록 |
 | 복구 계획서 (WP.08-14) | 백업 및 복구 요구사항 |
 
+
+## WP 양식 참조
+
+> 산출물 양식은 `docs/wp-templates/README.md` 인덱스를 참조하세요. 각 WP ID별 상세 양식이 제공됩니다.
 ## Constraints
 
 - 공통 제약사항은 `aspice-sup8` 에이전트 참조

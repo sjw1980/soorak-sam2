@@ -53,6 +53,10 @@ argument-hint: "작업 내용을 입력하세요. 예: '변경 요청 영향 분
 | SWE 산출물 (REQ/ARCH/TC 등) | 영향받는 기술 산출물 식별          |
 | 기존 CR 목록 (WP.13-16)     | 다른 CR과의 의존성 파악            |
 
+
+## WP 양식 참조
+
+> 산출물 양식은 `docs/wp-templates/README.md` 인덱스를 참조하세요. 각 WP ID별 상세 양식이 제공됩니다.
 ## Constraints
 
 - 공통 제약사항은 `aspice-sup10` 에이전트 참조

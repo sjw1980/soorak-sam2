@@ -48,6 +48,10 @@ argument-hint: "작업 내용을 입력하세요. 예: '문제 해결 검증 및
 | 테스트 결과 (SWE-4/5/6) | 수정 후 재실행 결과              |
 | 변경 요청 기록 (SUP-10) | 연결 CR 종료 여부                |
 
+
+## WP 양식 참조
+
+> 산출물 양식은 `docs/wp-templates/README.md` 인덱스를 참조하세요. 각 WP ID별 상세 양식이 제공됩니다.
 ## Constraints
 
 - 공통 제약사항은 `aspice-sup9` 에이전트 참조

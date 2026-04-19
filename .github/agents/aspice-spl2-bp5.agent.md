@@ -54,6 +54,10 @@ argument-hint: "작업 내용을 입력하세요. 예: '출시 빌드 수행 기
 | SUP.8 통합 빌드 베이스라인 (WP.13-08) | 출시 빌드에 사용할 형상 항목 목록 |
 | SUP.8 형상 관리 기록 (WP.13-10)       | CI 버전 및 상태 정보              |
 
+
+## WP 양식 참조
+
+> 산출물 양식은 `docs/wp-templates/README.md` 인덱스를 참조하세요. 각 WP ID별 상세 양식이 제공됩니다.
 ## Constraints
 
 - 공통 제약사항은 `aspice-spl2` 에이전트 참조

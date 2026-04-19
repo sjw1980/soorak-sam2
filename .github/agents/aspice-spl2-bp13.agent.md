@@ -50,6 +50,10 @@ argument-hint: "작업 내용을 입력하세요. 예: '출시물 고객 전달 
 | SPL.2.BP12 출시 패키지 (WP.11-04)    | 전달 대상 최종 패키지      |
 | 고객 연락처 및 전달 지시사항         | 전달 대상 및 방법          |
 
+
+## WP 양식 참조
+
+> 산출물 양식은 `docs/wp-templates/README.md` 인덱스를 참조하세요. 각 WP ID별 상세 양식이 제공됩니다.
 ## Constraints
 
 - 공통 제약사항은 `aspice-spl2` 에이전트 참조

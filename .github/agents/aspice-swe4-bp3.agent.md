@@ -55,6 +55,10 @@ argument-hint: "작업 내용을 입력하세요. 예: '정적 코드 검토 결
 | SW 상세 설계서 (WP.04-05)   | 검증 대상 SW 유닛 소스코드 및 설계 명세     |
 | SW 유닛 소스코드 (WP.11-05) | 실제 검증 대상 소스 파일                    |
 
+
+## WP 양식 참조
+
+> 산출물 양식은 `docs/wp-templates/README.md` 인덱스를 참조하세요. 각 WP ID별 상세 양식이 제공됩니다.
 ## Constraints
 
 - 공통 제약사항은 `aspice-swe4` 에이전트 참조
