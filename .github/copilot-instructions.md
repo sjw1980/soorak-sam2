@@ -9,7 +9,7 @@
 
 | 항목              | 내용                                             |
 | ----------------- | ------------------------------------------------ |
-| 프로젝트명        | CLI Calculator (soorak-sam)                      |
+| 프로젝트명        | CLI Calculator (soorak-sam2)                     |
 | 목적              | ASPICE PAM 3.1 기준 SW 개발 프로세스 예시 구현   |
 | 언어              | C++17 (primary) / C11 (미사용 stub — main.c)     |
 | 빌드 시스템       | CMake 3.16+                                      |

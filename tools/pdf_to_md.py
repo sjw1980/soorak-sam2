@@ -192,4 +192,4 @@ def pdf_to_markdown(pdf_path, output_dir):
 
 
 if __name__ == "__main__":
-    pdf_to_markdown("D:/0_work/aspice/Automotive_SPICE_PAM_31_KR.pdf", "output")
+    pdf_to_markdown(r"C:\Users\sjw19\Downloads\Automotive_SPICE_PAM_31_KR.pdf", "output")

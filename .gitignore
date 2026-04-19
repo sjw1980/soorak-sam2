@@ -18,3 +18,5 @@ coverage_html/
 .vscode/settings.json
 .cache/
 compile_commands.json
+
+output
