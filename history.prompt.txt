@@ -1,3 +1,5 @@
+41 @ASPICE MAN-3 BP4 전문가 프로젝트 활동과 WBS를 정의해줘. MAN3-PP-0001의 WBS 섹션과 일정(WP.14-06), WBS(WP.14-09)를 docs/MAN-3/ 에 작성해줘. 지금까지 작성된 모든 전략 문서를 참조해.
+
 40 @ASPICE SWE-6 BP1 전문가 SW 적격성 테스트 전략 및 시험 계획서(WP.08-52, WP.19-00)를 docs/SWE-6/ 에 작성해줘.
 
 39 Try Again
