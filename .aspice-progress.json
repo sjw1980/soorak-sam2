@@ -11,9 +11,10 @@
     "SWE4-BP1",
     "SWE5-BP1",
     "SWE5-BP2",
-    "SWE6-BP1"
+    "SWE6-BP1",
+    "MAN3-BP4"
   ],
-  "last_step_index": 11,
+  "last_step_index": 12,
   "started_at": "2026-04-19 12:17",
-  "last_stopped_at": "2026-04-19 12:39"
+  "last_stopped_at": "2026-04-19 15:24"
 }
