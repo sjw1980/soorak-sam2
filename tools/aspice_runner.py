@@ -91,6 +91,15 @@ def git_commit(message: str) -> bool:
         return False
 
 
+def create_step_directories(step: dict):
+    """단계의 예상 산출물 디렉토리를 미리 생성합니다."""
+    for expected in step["expected_outputs"]:
+        path = PROJ_ROOT / expected
+        # 확장자가 없으면 디렉터리로 간주
+        if not path.suffix:
+            path.mkdir(parents=True, exist_ok=True)
+
+
 def verify_clean_state(step_name: str) -> bool:
     """다음 단계 진행 전 git 상태가 깨끗한지 확인합니다."""
     if git_has_changes():
@@ -899,10 +908,21 @@ def print_header():
 def print_status(progress: dict):
     completed = set(progress.get("completed_steps", []))
     last = progress.get("last_step_index", -1)
+    stopped_at = progress.get("last_stopped_at", "")
     print(f"\n{'─' * 60}")
     print(f"  진행 상황: {len(completed)}/{len(STEPS)} 완료")
     if progress.get("started_at"):
         print(f"  시작일: {progress['started_at']}")
+    if stopped_at:
+        print(f"  마지막 중단: {stopped_at}")
+
+    next_index = last + 1
+    if next_index < len(STEPS):
+        next_step = STEPS[next_index]
+        print(f"\n  ▶ 다음 실행 단계: [{next_step['phase']}] {next_index + 1}. {next_step['title']}")
+        print(f"  💡 재개 명령어: python tools/aspice_runner.py --resume")
+    else:
+        print(f"\n  🎉 모든 단계가 완료되었습니다!")
     print(f"{'─' * 60}")
 
     current_phase = ""
@@ -911,7 +931,20 @@ def print_status(progress: dict):
             current_phase = step["phase"]
             print(f"\n  [{current_phase}]")
         status = "✓" if step["id"] in completed else ("▶" if i == last + 1 else " ")
-        print(f"    [{status}] {i+1:2d}. {step['title']}")
+
+        # 완료된 단계는 출력 폴더 파일 수 표시
+        if step["id"] in completed:
+            file_counts = []
+            for expected in step["expected_outputs"]:
+                path = PROJ_ROOT / expected
+                if path.is_dir():
+                    count = sum(1 for f in path.iterdir() if f.is_file())
+                    file_counts.append(f"{Path(expected).name}({count}파일)")
+            count_str = "  — " + ", ".join(file_counts) if file_counts else ""
+        else:
+            count_str = ""
+
+        print(f"    [{status}] {i+1:2d}. {step['title']}{count_str}")
     print()
 
 
@@ -925,6 +958,9 @@ def run_step(index: int, step: dict, progress: dict):
     print(f"  Agent: {step['agent']}")
     print(f"  설명: {step['description']}")
     print(f"{SEPARATOR}")
+
+    # 0) 산출물 디렉토리 사전 생성
+    create_step_directories(step)
 
     # 1) 이전 단계 커밋 여부 확인
     if not verify_clean_state(step["title"]):
@@ -949,7 +985,15 @@ def run_step(index: int, step: dict, progress: dict):
         print(f"  예상 산출물: {', '.join(step['expected_outputs'])}")
         input(f"\n  작성을 완료했으면 Enter를 누르세요... ")
     else:
-        # 클립보드에 프롬프트 복사
+        # /clear 를 클립보드에 복사 → 사용자가 Chat에 붙여넣기
+        print(f"\n  {'─' * 56}")
+        print(f"  ⚠️  Copilot Chat 컨텍스트 초기화가 필요합니다.")
+        copy_to_clipboard("/clear")
+        print(f"  ✓ '/clear' 를 클립보드에 복사했습니다.")
+        print(f"  👉 Chat 입력창에 Ctrl+V → Enter 하세요.")
+        print(f"  {'─' * 56}")
+        input(f"  /clear 완료 후 Enter... ")
+
         print(f"\n  📋 프롬프트를 클립보드에 복사합니다...")
         prompt_text = step["prompt"]
         if copy_to_clipboard(prompt_text):
@@ -959,7 +1003,7 @@ def run_step(index: int, step: dict, progress: dict):
             print(f"  {prompt_text}")
             print(f"  ─────────────────────────────")
 
-        print(f"\n  👉 위 프롬프트를 AI(Copilot Chat 등)에 붙여넣고 실행하세요.")
+        print(f"\n  👉 Copilot Chat에 Ctrl+V로 붙여넣고 실행하세요.")
         print(f"  👉 Agent가 산출물을 생성하면 Enter를 누르세요.")
         input(f"\n  Agent 작업 완료 후 Enter... ")
 
@@ -1049,6 +1093,20 @@ def main():
         print(f"  ▶ 단계 {start_index + 1}부터 재개합니다.")
     else:
         start_index = 0
+        # 진행 중인 작업이 있으면 재개 여부 확인
+        last = progress.get("last_step_index", -1)
+        if last >= 0:
+            next_idx = last + 1
+            stopped_at = progress.get("last_stopped_at", "알 수 없음")
+            print(f"\n  ⚠️  진행 중인 작업이 감지되었습니다!")
+            print(f"  마지막 완료: 단계 {last + 1} — {STEPS[last]['title']}")
+            print(f"  중단 시각: {stopped_at}")
+            if next_idx < len(STEPS):
+                print(f"  다음 단계: [{STEPS[next_idx]['phase']}] {next_idx + 1}. {STEPS[next_idx]['title']}")
+            resp = input("\n  [Enter] 중단 지점부터 재개 / [new] 처음부터 시작: ").strip().lower()
+            if resp != "new":
+                start_index = next_idx
+                print(f"  ▶ 단계 {start_index + 1}부터 재개합니다.")
 
     if not progress.get("started_at"):
         progress["started_at"] = datetime.now().strftime("%Y-%m-%d %H:%M")
@@ -1058,12 +1116,16 @@ def main():
         step = STEPS[i]
         success = run_step(i, step, progress)
         if not success:
+            progress["last_stopped_at"] = datetime.now().strftime("%Y-%m-%d %H:%M")
+            save_progress(progress)
             print(f"\n  ⏸  단계 {i+1}에서 중단되었습니다. --resume으로 재개하세요.")
             return
 
         if i < len(STEPS) - 1:
             resp = input(f"\n  다음 단계로 진행하시겠습니까? (Enter: 계속 / q: 종료): ").strip()
             if resp.lower() == "q":
+                progress["last_stopped_at"] = datetime.now().strftime("%Y-%m-%d %H:%M")
+                save_progress(progress)
                 print(f"\n  ⏸  중단됨. 'python tools/aspice_runner.py --resume'으로 재개하세요.")
                 return
 

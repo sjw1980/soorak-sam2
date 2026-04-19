@@ -20,3 +20,5 @@ coverage_html/
 compile_commands.json
 
 output
+
+__pycache__/
