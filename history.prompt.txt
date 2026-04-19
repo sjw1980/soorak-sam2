@@ -1,3 +1,5 @@
+40 @ASPICE SWE-6 BP1 전문가 SW 적격성 테스트 전략 및 시험 계획서(WP.08-52, WP.19-00)를 docs/SWE-6/ 에 작성해줘.
+
 39 Try Again
 
 38 @ASPICE SWE-5 BP2 전문가 SW 통합 시험 전략(회귀 시험 전략 포함)을 docs/SWE-5/ 시험 계획서에 추가해줘.
