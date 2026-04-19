@@ -57,7 +57,7 @@ def git_has_changes() -> bool:
     """워킹 디렉토리에 uncommitted 변경사항이 있는지 확인합니다."""
     result = subprocess.run(
         ["git", "status", "--porcelain"],
-        capture_output=True, text=True, cwd=PROJ_ROOT
+        capture_output=True, text=True, encoding="utf-8", cwd=PROJ_ROOT
     )
     # .aspice-progress.json 변경은 무시
     lines = [
@@ -71,7 +71,7 @@ def git_status_summary() -> str:
     """git status 요약을 반환합니다."""
     result = subprocess.run(
         ["git", "status", "--short"],
-        capture_output=True, text=True, cwd=PROJ_ROOT
+        capture_output=True, text=True, encoding="utf-8", cwd=PROJ_ROOT
     )
     return result.stdout.strip()
 
@@ -81,7 +81,7 @@ def git_commit(message: str) -> bool:
     subprocess.run(["git", "add", "-A"], cwd=PROJ_ROOT, capture_output=True)
     result = subprocess.run(
         ["git", "commit", "-m", message],
-        capture_output=True, text=True, cwd=PROJ_ROOT
+        capture_output=True, text=True, encoding="utf-8", cwd=PROJ_ROOT
     )
     if result.returncode == 0:
         print(f"  [✓] 커밋 완료: {message}")

@@ -1,7 +1,9 @@
 {
   "completed_steps": [
-    "PHASE0-KICKOFF"
+    "PHASE0-KICKOFF",
+    "MAN3-BP1"
   ],
-  "last_step_index": 0,
-  "started_at": "2026-04-19 12:17"
+  "last_step_index": 1,
+  "started_at": "2026-04-19 12:17",
+  "last_stopped_at": "2026-04-19 12:23"
 }
