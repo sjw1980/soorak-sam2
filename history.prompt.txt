@@ -1,3 +1,10 @@
+18 소프트웨어 개발부터 출시까지.. 가능한 모두 AI agent를 활용할 예정이야.
+어떤 제품을 만들지. 어떤 플랫폼을 사용할지 정해진 것은 없어.
+시작시, 사람이 꼭 결정해야 하는 내용이 있다면 markdown 양식을 만들어줘.
+- Agent 끼리의 합의나 토론, 일정등에 대한 것은 불필요해 그에 맞게 다음 문서들을 참조해서 수정해줘.
+  - docs/aspice_workflow.md
+  - docs/aspice_wp_overview.md
+
 17 ASPICE 의 에이전트를 세분화해서 agent를 만들꺼야.
 세분화는 각 프로세스의 BP로 나누면돼..
 세분화 BP는. docs/aspice_workflow.md 를 참조해줘.
