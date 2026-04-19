@@ -1,3 +1,5 @@
+32 @ASPICE SUP-8 BP1 전문가 형상 관리 계획서(WP.08-04)와 복구 계획서(WP.08-14)를 docs/SUP-8/ 에 작성해줘. 프로젝트 계획서(MAN3-PP-0001)와 PROJECT-KICKOFF.md를 참조해.
+
 31 @ASPICE MAN-3 BP3 전문가 프로젝트 타당성 평가를 수행하고 검토 기록(WP.13-19)을 docs/MAN-3/ 에 작성해줘.
 
 30 @ASPICE MAN-3 BP3 전문가 프로젝트 타당성 평가를 수행하고 검토 기록(WP.13-19)을 docs/MAN-3/ 에 작성해줘.
