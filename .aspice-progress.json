@@ -14,9 +14,10 @@
     "SWE6-BP1",
     "MAN3-BP4",
     "SUP8-BP2",
-    "SUP8-BP3"
+    "SUP8-BP3",
+    "SUP1-BP2"
   ],
-  "last_step_index": 14,
+  "last_step_index": 15,
   "started_at": "2026-04-19 12:17",
   "last_stopped_at": "2026-04-19 15:24"
 }
